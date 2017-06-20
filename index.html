@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arina Mirova 4 laba</title>
+        <link rel="stylesheet" href="styles.css" />
+        <meta charset="utf-8" />
+        <script src="lab4lib.js"></script>
+        <script src="lab4.js"></script>
+    </head>
+    
+    <body>
+        <table id="tasks" border="2">
+           <thead>
+               <tr>
+                   <td>Завдання</td>
+                   <td></td>
+                   <td>Результат</td>
+               </tr>
+           </thead>
+            <tr id="task1">
+                <td class="task">
+                    <span class="number">Завдання №1.</span>
+                    <span class="description">Виведення поточної дати та часу</span>
+                </td>
+                
+                <td class="buttons">
+                    <button onclick="currentDate('result1')">Виконати</button>
+                </td>
+                
+                <td id="result1">
+                </td>
+            </tr>
+            
+            <tr class="row">
+                <td class="task">
+                    <span class="number">Завдання №2.</span>
+                    <span class="description">Виведення дня тижня</span>
+                </td>
+
+                <td class="buttons">
+                    <button onclick="day('result2')">Виконати</button>
+                </td>
+
+                <td class="result">
+                    <span id="result2"></span>
+                </td>
+            </tr>
+            
+            <tr class="row">
+                <td class="task">
+                    <span class="number">Завдання №3.</span>
+                    <span class="description">Виведення дати що була N днів назад</span>
+                </td>
+
+                <td class="buttons">
+                    <label>
+                        N = <input type="text" id="daysAgo"/> 
+                    </label>
+                    <button onclick="dateBefore('daysAgo', 'result3')">Виконати</button>
+                </td>
+
+                <td class="result">
+                    <span id="result3"></span>
+                </td>
+            </tr>
+            
+            <tr class="row">
+                <td class="task">
+                    <span class="number">Завдання №4.</span>
+                    <span class="description">Виведення останнього дня місяця за заданим роком та номером місяця</span>
+                </td>
+
+                <td class="buttons">
+                    <label>
+                        year: <input type="number" id="Task4Year"/> 
+                    </label>
+                    <br />
+                    <label>
+                        month: <input type="number" id="Task4Number"/> 
+                    </label>
+                    <br />
+                    <button onclick="lastDay('Task4Year', 'Task4Number', 'result4')">Виконати</button>
+                </td>
+
+                <td id="result4">
+                </td>
+            </tr>
+            
+            <tr class="row">
+                <td class="task">
+                    <span class="number">Завдання №5.</span>
+                    <span class="description">Виведення кількості секунд від початку сьогоднішнього дня та до його кінця</span>
+                </td>
+
+                <td class="buttons">
+                    <button onclick="seconds('result5')">Виконати</button>
+                </td>
+
+                <td id="result5">
+                </td>
+            </tr>
+            
+            <tr class="row">
+                <td class="task">
+                    <span class="number">Завдання №6.</span>
+                    <span class="description">Виведення заданої дати у вигляді ДД.ММ.РРРР</span>
+                </td>
+
+                <td class="buttons">
+                    <label>
+                        year: <input type="number" id="Task6Year"/> 
+                    </label>
+                    <br />
+                    <label>
+                        month: <input type="number" id="Task6Month"/> 
+                    </label>
+                    <br />
+                    <label>
+                        date: <input type="number" id="Task6Date"/> 
+                    </label>
+                    <br />
+                    <button onclick="formattedDate('Task6Year', 'Task6Month', 'Task6Date', 'result6')">Виконати</button>
+                </td>
+
+                <td class="result">
+                    <span id="result6"></span>
+                </td>
+            </tr>
+            
+            <tr class="row">
+                <td class="task">
+                    <span class="number">Завдання №7.</span>
+                    <span class="description">Виведення різниці між двома датами</span>
+                </td>
+
+                <td class="buttons">
+                    <div>
+                        Початкова дата:<br />
+                        <label>
+                            year: <input type="number" id="STask7Year"/> 
+                        </label>
+                        <br />
+                        <label>
+                            month: <input type="number" id="STask7Month"/> 
+                        </label>
+                        <br />
+                        <label>
+                            date: <input type="number" id="STask7Date"/> 
+                        </label>
+                    </div>
+                    
+                    <div>
+                        Кінцева дата:<br />
+                        <label>
+                            year: <input type="number" id="ETask7Year"/> 
+                        </label>
+                        <br />
+                        <label>
+                            month: <input type="number" id="ETask7Month"/> 
+                        </label>
+                        <br />
+                        <label>
+                            date: <input type="number" id="ETask7Date"/> 
+                        </label>
+                    </div>
+                    
+                    <button onclick="subs('STask7Year', 'STask7Month', 'STask7Date', 'ETask7Year', 'ETask7Month', 'ETask7Date', 'result7')">Виконати</button>                    
+                </td>
+
+                <td class="result">
+                    <span id="result7"></span>
+                </td>
+            </tr>
+            
+            <tr class="row">
+                <td class="task">
+                    <span class="number">Завдання №8.</span>
+                    <span class="description">Виведення відформатованих дат</span>
+                </td>
+
+                <td class="buttons">
+                    <button onclick="formDat('result8')">Виконати</button>
+                </td>
+
+                <td class="result">
+                    <span id="result8"></span>
+                </td>
+            </tr>
+            
+            <tr class="row">
+                <td class="task">
+                    <span class="number">Завдання №9.</span>
+                    <span class="description">
+                        Формування дати з введенного рядка
+                        <br />
+                        Приклади: dd/mm/yyyy, dd.mm.yyyy, dd-mm-yyyy, dd/mm/yyyy hh:mm, dd.mm.yyyy hh:mm, dd-mm-yyyy hh:mm
+                    </span>
+                </td>
+
+                <td class="buttons">
+                    <label>
+                        <input type="text" id="date9"/> 
+                    </label>
+                    <br /><br />
+                    <button onclick="dateFromFormat('date9', 'result9')">Виконати</button>
+                </td>
+
+                <td class="result">
+                    <span id="result9"></span>
+                </td>
+            </tr>
+            
+            <tr class="row">
+                <td class="task">
+                    <span class="number">Завдання №10.</span>
+                    <span class="description">Виведення дати на вказанній мові</span>
+                </td>
+
+                <td class="buttons">
+                    <label>
+                        <input type="text" id="date10"/> 
+                    </label>
+                    <br /><br />
+                    <button onclick="dateFromLang('date10', 'result10')">Виконати</button>
+                </td>
+
+                <td class="result">
+                    <span id="result10"></span>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
